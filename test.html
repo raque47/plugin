@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div {
+    width: 300PX;
+    height: 200px;
+    border: 1px solid black;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+</style>
+</head>
+<body>
+
+<div class="show" onmousemove="myFunction(event)" onmouseout="clearCoor()" id="uno">
+    <p id="myP" onmousedown="mouseDown(event)" onmouseup="mouseUp(event)">
+    Click the text! The mouseDown() function is triggered when the mouse button is pressed down over this paragraph, and sets the color of the text to red. The mouseUp() function is triggered when the mouse button is released, and sets the color of the text to green.
+    </p>
+</div>
+
+<div class="hide" onmousemove="myFunction(event)" onmouseout="clearCoor()" id="dos">
+    <p id="myP" onmousedown="mouseDown(event)" onmouseup="mouseUp(event)">
+    DOSSSS button is pressed down over this paragraph, and sets the color of the text to red. The mouseUp() function is triggered when the mouse button is released, and sets the color of the text to green.
+    </p>
+</div>
+<div class="hide" onmousemove="myFunction(event)" onmouseout="clearCoor()" id="tres">
+    <p id="myP" onmousedown="mouseDown(event)" onmouseup="mouseUp(event)">
+   TRES TRES ressed down over this paragraph, and sets the color of the text to red. The mouseUp() function is triggered when the mouse button is released, and sets the color of the text to green.
+    </p>
+</div>
+
+
+<p id="demo"></p>
+
+<script>
+var xStart= 0;
+var xEnd=0;
+function mouseDown(e) {
+    document.getElementById("myP").style.color = "red";
+    var x = e.clientX;
+    xStart = e.clientX;
+    var y = e.clientY;
+    var coor = "Xstart " + xStart;
+    console.log(coor);
+}
+
+function mouseUp(e) {
+    xEnd = e.clientX;
+    document.getElementById("myP").style.color = "green";
+    var uno = document.getElementById("uno");
+    var dos = document.getElementById("dos");
+    var tres = document.getElementById("tres");
+    if(xStart < xEnd){
+        uno.style.display ="none";
+        dos.style.display="block";
+    }
+    else{
+        if ( xStart > xEnd){
+        uno.style.display ="none";
+        tres.style.display="block";
+
+        }
+    }
+    console.log(coor);
+}
+</script>
+<script>
+function myFunction(e) {
+    var x = e.clientX;
+    var y = e.clientY;
+    var coor = "Coordinates: (" + x + "," + y + ")";
+    
+    document.getElementById("demo").innerHTML = coor;
+}
+
+function clearCoor() {
+    document.getElementById("demo").innerHTML = "";
+}
+</script>
+
+</body>
+</html>
+

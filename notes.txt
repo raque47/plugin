@@ -1,0 +1,7 @@
+https://jquerymobile.com/download/
+
+https://stackoverflow.com/questions/15131237/jquery-mobile-swipe-event
+
+http://demos.jquerymobile.com/1.3.2/examples/swipe/sydney.html
+
+https://api.jquerymobile.com/swiperight/

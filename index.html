@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        div {
+            width: 300PX;
+            height: 200px;
+            border: 1px solid black;
+        }
+
+        .hide {
+            display: none;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="show" onmousemove="myFunction(event)" onmouseout="clearCoor()" id="uno">
+        <p id="myP" onmousedown="mouseDown(event)" onmouseup="mouseUp(event)">
+            Click the text! The mouseDown() function is triggered when the mouse button is pressed down over this paragraph, and sets
+            the color of the text to red. The mouseUp() function is triggered when the mouse button is released, and sets
+            the color of the text to green.
+        </p>
+    </div>
+
+    <div class="hide" onmousemove="myFunction(event)" onmouseout="clearCoor()" id="dos">
+        <p id="myP" onmousedown="mouseDown(event)" onmouseup="mouseUp(event)">
+            DOSSSS button is pressed down over this paragraph, and sets the color of the text to red. The mouseUp() function is triggered
+            when the mouse button is released, and sets the color of the text to green.
+        </p>
+    </div>
+    <div class="hide" onmousemove="myFunction(event)" onmouseout="clearCoor()" id="tres">
+        <p id="myP" onmousedown="mouseDown(event)" onmouseup="mouseUp(event)">
+            TRES TRES ressed down over this paragraph, and sets the color of the text to red. The mouseUp() function is triggered when
+            the mouse button is released, and sets the color of the text to green.
+        </p>
+    </div>
+
+
+    <p id="demo"></p>
+
+   
+<script src="/jquery-3.2.1.min"></script>
+
+<script src="/jQuery-Plugin-For-Touch-Drag-Events-touch-js/jquery.touch.js"></script>
+
+
+</body>
+
+</html>
